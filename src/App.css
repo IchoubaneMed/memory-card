@@ -18,6 +18,7 @@
   margin: 15px;
   border: 5px solid #2980b9;
   border-radius: 8px;
+  position: relative;
 }
 
 .card img {
@@ -30,4 +31,14 @@
   box-shadow: 0px 0px 8px 5px #2980b9;
   -webkit-box-shadow: 0px 0px 8px 5px #2980b9;
   -moz-box-shadow: 0px 0px 8px 5px #2980b9;
+}
+
+.card h1 {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #2980b9;
+  -webkit-text-stroke: .8px black;
 }
