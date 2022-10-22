@@ -60,3 +60,9 @@
   grid-row: 3 / 4;
   z-index: 1;
 }
+
+@media screen and (max-width: 800px) {
+  .App {
+    grid-template-rows: 115px 1fr 40px;
+  }
+}

@@ -21,5 +21,14 @@
 .score {
     display: flex;
     justify-content: space-between;
-    width: 20%;
+    width: 50%;
 }
+
+@media screen and (max-width: 800px) {
+    .container {
+      flex-direction: column;
+    }
+    .score {
+        width: 100%;
+    }
+  }
