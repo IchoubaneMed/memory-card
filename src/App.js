@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css'
 import data from './data'
+import Header from './components/Header';
 
 function App() {
   let dataArr = data;
@@ -48,8 +49,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>{score} || {bestScore}</h1>
-      <h1>{lost.toString()}</h1>
+      <div className="header">
+        <Header score={score} bestScore={bestScore}/>
+      </div>
       <div className="card-container">
         {cars.map(item => {
           return (
