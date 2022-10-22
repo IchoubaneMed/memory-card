@@ -20,7 +20,7 @@ function App() {
       setClickedCard(pre => pre.concat(id));
 
       setScore(pre => pre + 1);
-      
+
       setLost(false);
     } else {
       setLost(true);
@@ -29,7 +29,7 @@ function App() {
     console.log(clickedCard);
   }
 
-  
+
 
 
   useEffect(() => {
@@ -39,11 +39,11 @@ function App() {
       setClickedCard([]);
     }
 
-    if(score >= 4 && score % 4 === 0 && score < 16) {
+    if (score >= 4 && score % 4 === 0 && score < 16) {
       setCars(dataArr.slice(0, score + 4).sort(() => Math.random() - 0.5))
     }
 
-    if(score > bestScore) {
+    if (score > bestScore) {
       setBestScore(pre => pre + 1);
     }
   }, [lost, score, bestScore, dataArr]);
@@ -51,7 +51,10 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <Header score={score} bestScore={bestScore}/>
+        <Header score={score} bestScore={bestScore} />
+      </div>
+      <div className="para">
+        <p>Get points by clicking on an image but don't click on any more than once!</p>
       </div>
       <div className="card-container">
         {cars.map(item => {
