@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css'
 import data from './data'
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   let dataArr = data;
@@ -61,7 +62,9 @@ function App() {
             </div>
           )
         })}
-
+      </div>
+      <div className="footer">
+        <Footer />
       </div>
     </div>
   );
